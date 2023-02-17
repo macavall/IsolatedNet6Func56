@@ -35,13 +35,13 @@ namespace v4net6funcconfigstart563
             string message2 = _configuration[keyName2];
 
             string sentinelKey = "Sentinel";
-            string sentinelMessage = _configuration[keyName2];
+            string sentinelMessage = _configuration[sentinelKey];
 
 
 
             response.WriteString(message + "__" ?? $"Please create a key-value with the key '{keyName}' in Azure App Configuration.____{System.Environment.NewLine}");
             response.WriteString(message2 + "__" ?? $"Please create a key-value with the key '{keyName2}' in Azure App Configuration.____{System.Environment.NewLine}");
-            response.WriteString(sentinelKey + "__" ?? $"Please create a key-value with the key '{sentinelMessage}' in Azure App Configuration.____{System.Environment.NewLine}");
+            response.WriteString(sentinelMessage + "__" ?? $"Please create a key-value with the key '{sentinelKey}' in Azure App Configuration.____{System.Environment.NewLine}");
 
             return response;
         }

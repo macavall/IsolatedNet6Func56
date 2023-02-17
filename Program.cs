@@ -12,7 +12,7 @@ internal class Program
                 {
                     options.Connect(Environment.GetEnvironmentVariable("ConnectionString"))
                             // Load all keys that start with `TestApp:` and have no label
-                            .Select("TestApp:*")
+                            .Select("*")
                             // Configure to reload configuration if the registered sentinel key is modified
                             .ConfigureRefresh(refreshOptions =>
                                 refreshOptions.Register("Sentinel", refreshAll: true));
